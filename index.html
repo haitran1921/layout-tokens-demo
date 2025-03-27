@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Tokens Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Layout Tokens Demonstration</h1>
+        
+        <!-- Basic Zone Example -->
+        <div class="zone">
+            <h2>Basic Zone with Default Tokens</h2>
+            <p>This zone demonstrates basic padding, radius, and shadow.</p>
+        </div>
+
+        <!-- Nested Card Example -->
+        <div class="zone">
+            <h2>Nested Elements</h2>
+            <div class="nested-card">
+                <h3>Nested Card</h3>
+                <p>Shows nestedPaddingX and nestedPaddingY</p>
+            </div>
+        </div>
+
+        <!-- Text Spacing Example -->
+        <div class="zone">
+            <h2>Text Spacing</h2>
+            <p class="text">First paragraph of text</p>
+            <p class="text">Second paragraph showing textToText spacing</p>
+            <div class="text-with-icon">
+                <p>Text with icon</p>
+                <span class="icon">📎</span>
+            </div>
+            <div class="text-with-button">
+                <p>Text with button</p>
+                <button>Click me</button>
+            </div>
+        </div>
+
+        <!-- Group Gap Example -->
+        <div class="zone">
+            <h2>Form Groups</h2>
+            <div class="group">
+                <label>Username</label>
+                <input type="text" placeholder="Enter username">
+            </div>
+            <div class="group">
+                <label>Password</label>
+                <input type="password" placeholder="Enter password">
+            </div>
+        </div>
+
+        <!-- Full Width Example -->
+        <div class="zone full-width">
+            <h2>Full Width Zone</h2>
+            <p>This zone spans the full width of its container</p>
+        </div>
+
+        <!-- Alignment Example -->
+        <div class="zone align-center">
+            <h2>Centered Content</h2>
+            <p>This content is center-aligned</p>
+        </div>
+
+        <!-- Wrap Example -->
+        <div class="zone">
+            <h2>Wrap Example</h2>
+            <div class="wrap">
+                <div class="card">Card 1</div>
+                <div class="card">Card 2</div>
+                <div class="card">Card 3</div>
+                <div class="card">Card 4</div>
+            </div>
+        </div>
+
+        <!-- Overlap Example -->
+        <div class="zone">
+            <h2>Overlap Example</h2>
+            <div class="overlap">
+                <div class="overlap-card">Card 1</div>
+                <div class="overlap-card">Card 2</div>
+                <div class="overlap-card">Card 3</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
