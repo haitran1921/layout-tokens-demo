@@ -1,0 +1,183 @@
+/* Base styles and CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Layout Tokens Implementation */
+
+/* layout.element.paddingX & paddingY */
+.zone {
+    padding: 24px 32px; /* paddingY paddingX */
+    margin-bottom: 24px;
+    background: white;
+    border-radius: var(--layout-element-radius, 8px);
+    box-shadow: var(--layout-element-shadow, 0 2px 4px rgba(0,0,0,0.1));
+}
+
+/* layout.element.nestedPaddingX & nestedPaddingY */
+.nested-card {
+    padding: 16px 20px; /* nestedPaddingY nestedPaddingX */
+    background: #f8f8f8;
+    border-radius: var(--layout-element-nestedRadius, 4px);
+    margin: 16px 0;
+}
+
+/* layout.element.textToText */
+.text + .text {
+    margin-top: 16px;
+}
+
+/* layout.element.textToIcon */
+.text-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* textToIcon spacing */
+    margin: 16px 0;
+}
+
+/* layout.element.textToButton */
+.text-with-button {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* textToButton spacing */
+    margin: 16px 0;
+}
+
+/* layout.element.groupGap */
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* groupGap */
+    margin-bottom: 16px;
+}
+
+.group input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* layout.element.nestedGap */
+.nested-card > * + * {
+    margin-top: 12px; /* nestedGap */
+}
+
+/* layout.element.fullWidth */
+.full-width {
+    margin-left: calc(-1 * var(--container-padding, 20px));
+    margin-right: calc(-1 * var(--container-padding, 20px));
+    border-radius: 0;
+}
+
+/* layout.element.radius & nestedRadius */
+.zone {
+    --layout-element-radius: 8px;
+}
+
+.nested-card {
+    --layout-element-nestedRadius: 4px;
+}
+
+/* layout.element.shadow & nestedShadow */
+.zone {
+    --layout-element-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nested-card {
+    --layout-element-nestedShadow: none;
+}
+
+/* layout.element.alignment */
+.align-center {
+    text-align: center;
+}
+
+/* layout.element.wrap */
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.wrap .card {
+    flex: 1 1 200px;
+    padding: 16px;
+    background: #f8f8f8;
+    border-radius: 4px;
+}
+
+/* layout.element.overlap */
+.overlap {
+    position: relative;
+    height: 160px;
+    margin: 20px 0;
+}
+
+.overlap-card {
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    padding: 16px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.overlap-card:nth-child(1) {
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.overlap-card:nth-child(2) {
+    top: 20px;
+    left: 40px;
+    z-index: 2;
+}
+
+.overlap-card:nth-child(3) {
+    top: 40px;
+    left: 80px;
+    z-index: 1;
+}
+
+/* Button styles */
+button {
+    padding: 8px 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Icon styles */
+.icon {
+    font-size: 20px;
+    line-height: 1;
+}
